@@ -1,0 +1,34 @@
+@import url(../src/assets/components/Header/Header.css);
+@import url(../src/assets/components/SideNav/SideNav.css);
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+i,
+span,
+button,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.centered_flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a{
+  text-decoration: none;
+}
