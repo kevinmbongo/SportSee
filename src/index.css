@@ -1,5 +1,6 @@
 @import url(../src/assets/components/Header/Header.css);
 @import url(../src/assets/components/SideNav/SideNav.css);
+@import url(../src/assets/pages/homePage/HomePage.css);
 
 html,
 body {
@@ -29,6 +30,6 @@ body {
   align-items: center;
 }
 
-a{
+a {
   text-decoration: none;
 }
