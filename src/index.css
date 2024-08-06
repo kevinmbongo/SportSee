@@ -1,6 +1,6 @@
-@import url(../src/assets/components/Header/Header.css);
-@import url(../src/assets/components/SideNav/SideNav.css);
-@import url(../src/assets/pages/homePage/HomePage.css);
+@import url(../src/components/Header/Header.css);
+@import url(../src/components/SideNav/SideNav.css);
+@import url(../src/homePage/HomePage.css);
 
 html,
 body {

@@ -1,5 +1,5 @@
-import logoIcon from '../../../../public/images/logo-icon.svg';
-import logoName from '../../../../public/images/logo-name.svg';
+import logoIcon from '../../assets/images/logo-icon.svg';
+import logoName from '../../assets/images/logo-name.svg';
 
 function Header() {
   const navLinks = [

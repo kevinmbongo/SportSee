@@ -1,7 +1,7 @@
-import bikeIcon from '../../../../public/images/bike-icon.svg';
-import meditationIcon from '../../../../public/images/meditation-icon.svg';
-import swimmingIcon from '../../../../public/images/swimming-icon.svg';
-import weightIcon from '../../../../public/images/weight-icon.svg';
+import bikeIcon from '../../assets/images/bike-icon.svg';
+import meditationIcon from '../../assets/images/meditation-icon.svg';
+import swimmingIcon from '../../assets/images/swimming-icon.svg';
+import weightIcon from '../../assets/images/weight-icon.svg';
 
 function SideNav() {
   const Icons = [

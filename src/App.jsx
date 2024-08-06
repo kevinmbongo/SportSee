@@ -1,6 +1,6 @@
-import Header from './assets/components/Header';
-import SideNav from './assets/components/SideNav';
-import HomePage from './assets/pages/homePage';
+import Header from './components/Header';
+import SideNav from './components/SideNav';
+import HomePage from './homePage';
 
 function App() {
   return (
