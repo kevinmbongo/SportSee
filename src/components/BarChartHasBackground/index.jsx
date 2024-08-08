@@ -57,9 +57,15 @@ const CustomTooltip = ({ active, payload, label }) => {
   return null;
 };
 
-export default function App() {
+function BarChartHasBackground() {
   return (
     <div>
+      <span
+        className="chart_title"
+        style={{ textAlign: 'start', marginBottom: '20px' }}
+      >
+        Activité quotidienne
+      </span>
       <BarChart
         width={850}
         height={320}
@@ -67,9 +73,6 @@ export default function App() {
         barSize={10}
         margin={{ top: 20, right: 30, left: 10, bottom: 20 }}
       >
-        <h2 style={{ textAlign: 'start', marginBottom: '20px' }}>
-          Titre du Graphique
-        </h2>
         <CartesianGrid strokeDasharray="3 1" vertical={false} />
         <XAxis dataKey="name" />
         <YAxis
@@ -112,3 +115,4 @@ export default function App() {
     </div>
   );
 }
+export default BarChartHasBackground;
