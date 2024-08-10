@@ -12,7 +12,7 @@ export const USER_MAIN_DATA = [
       proteinCount: 155,
       carbohydrateCount: 290,
       lipidCount: 50,
-    },
+    },             
   },
   {
     id: 18,

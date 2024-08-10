@@ -1,0 +1,28 @@
+.health_thumbnail {
+  display: flex;
+  gap: 24px;
+  padding: 30px;
+  border-radius: 5px;
+  background: #fbfbfb;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.02);
+  .health_infos {
+    display: flex;
+    flex-direction: column;
+    span {
+      color: #282d30;
+      font-family: Roboto;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 24px; /* 120% */
+    }
+    i {
+      color: #74798c;
+      font-family: Roboto;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 24px; /* 171.429% */
+    }
+  }
+}

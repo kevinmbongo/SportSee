@@ -1,21 +1,12 @@
 import {
-  BarChart,
   Bar,
+  BarChart,
+  CartesianGrid,
+  Legend,
+  Tooltip,
   XAxis,
   YAxis,
-  CartesianGrid,
-  Tooltip,
-  Legend,
 } from 'recharts';
-
-const data = [
-  { name: 1, kg: 70.8, kcal: 69.4 },
-  { name: 2, kg: 70.4, kcal: 70.1 },
-  { name: 3, kg: 69.6, kcal: 70 },
-  { name: 4, kg: 70.3, kcal: 69.8 },
-  { name: 5, kg: 70.5, kcal: 70.3 },
-  { name: 6, kg: 69.4, kcal: 70.5 },
-];
 
 const CustomTooltip = ({ active, payload, label }) => {
   if (active && payload && payload.length) {
@@ -57,30 +48,36 @@ const CustomTooltip = ({ active, payload, label }) => {
   return null;
 };
 
-function BarChartHasBackground() {
+function BarChartHasBackground(props) {
+  const { data } = props;
   return (
-    <div>
-      <span
-        className="chart_title"
-        style={{ textAlign: 'start', marginBottom: '20px' }}
-      >
-        Activité quotidienne
-      </span>
+    <div className="bar_charts_container">
+      <span className="chart_title">Activité quotidienne</span>
       <BarChart
         width={850}
         height={320}
         data={data}
         barSize={10}
-        margin={{ top: 20, right: 30, left: 10, bottom: 20 }}
+        margin={{ top: 10, right: 30, left: 10, bottom: 20 }}
       >
         <CartesianGrid strokeDasharray="3 1" vertical={false} />
-        <XAxis dataKey="name" />
+        <XAxis dataKey="day" />
         <YAxis
+          yAxisId="right"
           orientation="right"
           stroke="#9B9EAC"
           tickCount={3}
-          domain={[69, 71]}
+          domain={[67, 71]}
         />
+
+        <YAxis
+          yAxisId="left"
+          orientation="left"
+          stroke="#9B9EAC"
+          tickCount={3}
+          domain={[100, 500]}
+        />
+
         <Tooltip content={<CustomTooltip />} />
         <Legend
           layout="horizontal"
@@ -88,11 +85,10 @@ function BarChartHasBackground() {
           verticalAlign="top"
           wrapperStyle={{ padding: '20px 20px 70px 20px' }}
           iconType="circle"
-          formatter={(value, entry) => {
-            // Mapping the data keys to custom legend labels
+          formatter={(value) => {
             const legendLabels = {
-              kg: 'Poids (kg)',
-              kcal: 'Calories brûlées (kCal)',
+              kilogram: 'Poids (kg)',
+              calories: 'Calories brûlées (kCal)',
             };
             return (
               <span
@@ -109,8 +105,18 @@ function BarChartHasBackground() {
           }}
         />
 
-        <Bar dataKey="kg" fill="#E60000" radius={[100, 100, 0, 0]} />
-        <Bar dataKey="kcal" fill="#282D30" radius={[100, 100, 0, 0]} />
+        <Bar
+          yAxisId="right"
+          dataKey="kilogram"
+          fill="#E60000"
+          radius={[100, 100, 0, 0]}
+        />
+        <Bar
+          yAxisId="left"
+          dataKey="calories"
+          fill="#282D30"
+          radius={[100, 100, 0, 0]}
+        />
       </BarChart>
     </div>
   );

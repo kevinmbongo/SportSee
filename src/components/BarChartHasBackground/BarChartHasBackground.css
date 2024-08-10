@@ -1,5 +1,12 @@
+.bar_charts_container {
+  position: relative;
+}
+
 .chart_title {
+  position: absolute;
+  top: 18px;
   color: #20253a;
+  text-align: end;
   font-family: Roboto;
   font-size: 15px;
   font-style: normal;

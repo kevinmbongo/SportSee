@@ -1,12 +1,12 @@
 .home_container {
   margin-left: 114px;
-  padding: 100px;
+  padding: 60px;
 }
 .home_title_container {
   display: flex;
   flex-direction: column;
-  gap: 40px;
-  padding-bottom: 50px;
+  gap: 30px;
+  padding-bottom: 40px;
 
   h1 {
     color: #000;
@@ -37,14 +37,38 @@
 .home_main_container {
   width: 100%;
   display: flex;
-  gap: 10px;
+  gap: 30px;
 
   .weight_chart {
-    height: 300px;
+    height: 280px;
     width: 800px;
     border-radius: 5px;
     background: #fbfbfb;
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.02);
     padding: 20px;
   }
+}
+.health_article_container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.central_article_container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  .bottom_article {
+    display: flex;
+    gap: 30px;
+  }
+}
+
+.target {
+  width: 258px;
+  height: 250px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  background: #f00;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.02);
 }

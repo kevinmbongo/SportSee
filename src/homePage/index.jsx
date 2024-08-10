@@ -1,40 +1,43 @@
-import { useEffect, useState } from 'react';
+import { CURRENT_ID } from '../assets/utils/constants';
 import BarChartHasBackground from '../components/BarChartHasBackground';
+
 import { USER_MAIN_DATA } from '../data/data';
+import HealthThumbnail from '../components/HealthThumbnail';
+import BAR_DATAS from '../components/BarChartHasBackground/BarData';
+import HEALTH_DATAS from '../components/HealthThumbnail/HealthData';
 
 function HomePage() {
-  const [userName, setUserName] = useState('');
+  const userData = USER_MAIN_DATA.find(({ id }) => id === CURRENT_ID);
 
-  useEffect(() => {
-    const userId = 18;
-    const userData = USER_MAIN_DATA.find(({ id }) => id === userId);
-
-    if (userData) {
-      setUserName(userData.userInfos.firstName);
-    } else {
-      console.log(`User with ID ${userId} not found.`);
-      setUserName('Utilisateur inconnu'); // ou toute autre valeur par défaut
-    }
-  }, []);
   return (
     <div className="home_container">
       <div className="home_title_container">
         <h1>
-          Bonjour <span>{userName}</span>
+          Bonjour <span>{userData.userInfos.firstName}</span>
         </h1>
         <p>Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
       </div>
       <section className="home_main_container">
-        <div>
-          <div className="weight_chart">
-            <BarChartHasBackground />
-          </div>
-
-          <div className="weight_chat">
-            <BarChartHasBackground />
-          </div>
+        <div className="central_article_container">
+          <article className="weight_chart">
+            <BarChartHasBackground data={BAR_DATAS} />
+          </article>
+          <article className="bottom_article">
+            <div className="target">objectif</div>
+            <div className="target">objectif</div>
+            <div className="target">objectif</div>
+          </article>
         </div>
-        <div> Calorie</div>
+        <article className="health_article_container">
+          {HEALTH_DATAS.map((obj, index) => (
+            <HealthThumbnail
+              key={index}
+              icon={obj.icon}
+              value={obj.value}
+              textName={obj.textName}
+            />
+          ))}
+        </article>
       </section>
     </div>
   );
