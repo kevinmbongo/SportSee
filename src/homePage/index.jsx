@@ -5,6 +5,7 @@ import { USER_MAIN_DATA } from '../data/data';
 import HealthThumbnail from '../components/HealthThumbnail';
 import BAR_DATAS from '../components/BarChartHasBackground/BarData';
 import HEALTH_DATAS from '../components/HealthThumbnail/HealthData';
+import IntensityChart from '../components/IntensityChart';
 
 function HomePage() {
   const userData = USER_MAIN_DATA.find(({ id }) => id === CURRENT_ID);
@@ -24,8 +25,10 @@ function HomePage() {
           </article>
           <article className="bottom_article">
             <div className="target">objectif</div>
-            <div className="target">objectif</div>
-            <div className="target">objectif</div>
+            <div className="intensity centered_flex">
+              <IntensityChart />
+            </div>
+            <div className="score">score</div>
           </article>
         </div>
         <article className="health_article_container">

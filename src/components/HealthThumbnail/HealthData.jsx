@@ -2,7 +2,7 @@ import caloriesIcon from '../../assets/images/calories-icon.png';
 import crabsIcon from '../../assets/images/carbs-icon.png';
 import fatIcon from '../../assets/images/fat-icon.png';
 import proteinIcon from '../../assets/images/protein-icon.png';
-import getData from '../../assets/utils/getData';
+import getActivityData from '../../assets/utils/getData/getActivityData';
 const icons = {
   calorieCount: caloriesIcon,
   proteinCount: proteinIcon,
@@ -16,7 +16,7 @@ const textNames = {
   lipidCount: 'Lipides',
 };
 
-const userActivity = getData();
+const userActivity = getActivityData();
 const HEALTH_DATAS = Object.entries(userActivity.keyData).map(
   ([key, value]) => ({
     key,

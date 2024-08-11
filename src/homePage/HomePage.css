@@ -41,7 +41,7 @@
 
   .weight_chart {
     height: 280px;
-    width: 800px;
+    width: 60vw;
     border-radius: 5px;
     background: #fbfbfb;
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.02);
@@ -60,15 +60,30 @@
   gap: 30px;
   .bottom_article {
     display: flex;
+    justify-content: space-between;
     gap: 30px;
   }
 }
 
 .target {
-  width: 258px;
-  height: 250px;
+  width: 250px;
+  height: 235px;
   flex-shrink: 0;
   border-radius: 5px;
   background: #f00;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.02);
+}
+.intensity {
+  width: 250px;
+  height: 235px;
+  border-radius: 5px;
+  background: #282d30;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.02);
+}
+.score {
+  width: 250px;
+  height: 235px;
+  border-radius: 5px;
+  background: #fbfbfb;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.02);
 }
