@@ -2,6 +2,7 @@
 @import url(../src/components/SideNav/SideNav.css);
 @import url(../src/components/BarChartHasBackground/BarChartHasBackground.css);
 @import url(../src/components/HealthThumbnail/HealthThumbnail.css);
+@import url(../src/components/TargetChart/TargetChart.css);
 
 @import url(../src/homePage/HomePage.css);
 

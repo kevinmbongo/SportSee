@@ -6,6 +6,7 @@ import HealthThumbnail from '../components/HealthThumbnail';
 import BAR_DATAS from '../components/BarChartHasBackground/BarData';
 import HEALTH_DATAS from '../components/HealthThumbnail/HealthData';
 import IntensityChart from '../components/IntensityChart';
+import TargetChart from '../components/TargetChart';
 
 function HomePage() {
   const userData = USER_MAIN_DATA.find(({ id }) => id === CURRENT_ID);
@@ -24,7 +25,9 @@ function HomePage() {
             <BarChartHasBackground data={BAR_DATAS} />
           </article>
           <article className="bottom_article">
-            <div className="target">objectif</div>
+            <div className="target centered_flex">
+              <TargetChart />
+            </div>
             <div className="intensity centered_flex">
               <IntensityChart />
             </div>

@@ -1,6 +1,5 @@
 import { PolarAngleAxis, PolarGrid, Radar, RadarChart } from 'recharts';
 
-import getPerformanceData from '../../assets/utils/getData/getPerformanceData';
 import INTENSITY_DATA from './IntensityData';
 
 const data = [
